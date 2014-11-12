@@ -12,6 +12,7 @@ gem 'simple_form', '3.1.0.rc2'
 gem 'gmaps4rails'
 gem 'geocoder'
 gem 'pg'
+gem 'rails_12factor'
 group :doc do
   gem 'sdoc', require: false
 end
