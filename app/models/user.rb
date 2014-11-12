@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   has_one :profile, dependent: :destroy
   has_many :properties, dependent: :destroy
   
-  before_save :create_profile, :create_property, :create_location
+  #before_save :create_profile, :create_property, :create_location
   
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

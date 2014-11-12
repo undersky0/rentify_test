@@ -31,7 +31,7 @@ class PropertiesController < ApplicationController
 
     respond_to do |format|
       if @property.save
-        format.html { redirect_to @property, notice: 'Property was successfully created.' }
+        format.html { redirect_to properties_path, notice: 'Property was successfully created.' }
         format.json { render :show, status: :created, location: @property }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class PropertiesController < ApplicationController
   def update
     respond_to do |format|
       if @property.update(property_params)
-        format.html { redirect_to @property, notice: 'Property was successfully updated.' }
+        format.html { redirect_to properties_path, notice: 'Property was successfully updated.' }
         format.json { render :show, status: :ok, location: @property }
       else
         format.html { render :edit }
@@ -66,8 +66,8 @@ class PropertiesController < ApplicationController
 
   private
     def redirect_invalid_profile
-    unless current_user.profile.firstname ==""
-    redirect_to(edit_user_profiles_path(current_user.id)) if invalid_profile?
+    unless current_user.nil?
+    redirect_to(new_user_profiles_path(current_user.id)) if invalid_profile?
     end
   end
 
