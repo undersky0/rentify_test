@@ -120,6 +120,7 @@ GEM
     nokogiri (1.6.4.1)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
+    pg (0.17.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -241,6 +242,7 @@ DEPENDENCIES
   kaminari (= 0.16.1)
   launchy
   letter_opener
+  pg
   rails (= 4.1.6)
   rails_layout (= 1.0.21)
   rspec-rails
