@@ -3,7 +3,7 @@ Retifyt::Application.configure do
 
   # Code is not reloaded between requests.
   config.cache_classes = true
-
+config.assets.initialize_on_precompile = false
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both thread web servers
   # and those relying on copy on write to perform better.
@@ -79,6 +79,7 @@ Retifyt::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
   
   # Mailer
+  config.action_mailer.default_url_options = { host: 'https://frozen-mountain-1773.herokuapp.com', port: 3000 }
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default_url_options = { :host => ENV["DOMAIN"] }
   config.action_mailer.delivery_method = :smtp

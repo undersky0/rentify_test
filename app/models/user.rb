@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   has_one :location, dependent: :destroy
   has_one :profile, dependent: :destroy
   has_many :properties, dependent: :destroy
+
   
   #before_save :create_profile, :create_property, :create_location
   
