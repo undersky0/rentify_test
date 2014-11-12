@@ -11,6 +11,7 @@ gem 'bcrypt', '3.1.7'
 gem 'simple_form', '3.1.0.rc2'
 gem 'gmaps4rails'
 gem 'geocoder'
+gem 'pg'
 group :doc do
   gem 'sdoc', require: false
 end
